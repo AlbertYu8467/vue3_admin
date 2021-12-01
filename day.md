@@ -21,3 +21,19 @@
 ```
 4. 在根目录创建.cz-confing.js文件
 5. 使用git cz 代替 git commit
+
+- git hooks
+1. pre-commit
+2. commit-msg
+
+- commitlint
+1. [commitlint](https://www.cnblogs.com/qiqi715/p/12737297.html)
+- husky
+1. npx husky install
+2. scripts里面加入"prepare": "husky install"
+3. npm run prepare
+4. npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+
+- husky 监听 pre-commit
+1. npx husky add .husky/pre-commit "npx eslint --ext .js,.vue src"
+2. [https://zhuanlan.zhihu.com/p/366786798](https://zhuanlan.zhihu.com/p/366786798)
